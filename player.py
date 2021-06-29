@@ -9,12 +9,17 @@ class Player(Turtle):
 
     def __init__(self):
         super().__init__()
+        self.start()
+
+    def move(self):
+        # Commented out my code
+        # new_y = self.ycor() + MOVE_DISTANCE
+        # self.goto(self.xcor(), new_y)
+        self.forward(MOVE_DISTANCE)
+
+    def start(self):
         self.shape("turtle")
         self.color("black", "green")
         self.penup()
         self.goto(STARTING_POSITION)
         self.setheading(90)
-
-    def move(self):
-        new_y = self.ycor() + MOVE_DISTANCE
-        self.goto(self.xcor(), new_y)
